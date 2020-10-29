@@ -8,5 +8,5 @@
 ##Aqui esta la segunda parte del funcionamiento.
 ![OPCION2](https://user-images.githubusercontent.com/54828392/97602698-9dbdee80-19d9-11eb-8153-66ed2624b1c5.jpeg)
 ##Aqui esta la tercera parte del funcionamiento.
-![OPCION 3](https://user-images.githubusercontent.com/54828392/97602696-9dbdee80-19d9-11eb-8304-6f0be38b7034.jpeg)
+![OPCION 3](https://user-images.githubusercontent.com/54828392/97604091-1a9d9800-19db-11eb-94b5-16228f1083b4.jpeg)
 
