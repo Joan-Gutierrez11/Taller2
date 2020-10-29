@@ -6,13 +6,13 @@ import java.util.Scanner;
 public class Bank {
 	static final int EXIT = 5;
     static ArrayList<User> users = new ArrayList<>();
-    private static Scanner input = new Scanner(System.in);
+    private static Scanner input = new Scanner(System.in);    
+    
     public static void initBank(){
         users.add(new User(1,"Usuario1",1,0.0));
         users.add(new User(2,"Usuario2",2,10000.0));
         users.add(new User(3,"Usuario3",3,1000000.0));
         users.add(new User(4,"Usuario4",4,500.0));
-
     }
 
     public static void main(String[] args) {
@@ -32,7 +32,7 @@ public class Bank {
         System.out.println("4 - Ver usuarios");
         System.out.println("5 - Salir");
         System.out.println("------------------------------------");
-        int option = Integer.valueOf(readConsole("Opcion"));
+        int option = Integer.valueOf(readConsole("Opcion"));        
         switch (option) {
         case 1:
             System.out.println("Crear Usuario");

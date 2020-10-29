@@ -6,25 +6,37 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.bank.Bank;
-
 public aspect Logger {
 	final String ruta = "src/";
 	String date = (new SimpleDateFormat("HH:mm:ss;dd/MM/yyyy")).format( new Date() );
 	
     pointcut success() : call(* createUser*(..) );
-    pointcut moneyTransaction() : call(* Bank.moneyMake*(..) );
-    pointcut moneyWithdrawal() : call(* Bank.moneyWit*(..) );
+    pointcut action() : execution(* *.money*());
+    //pointcut moneyTransaction() : call(* Bank.moneyMake*(..) );
+    //pointcut moneyWithdrawal() : call(* Bank.moneyWit*(..) );
 
     after() : success() {
-    	
     	createFile("User created");
     	System.out.println("**** User created ****");
-    
     }
-
-    after() : moneyTransaction() {
-    	
+       
+    after() : action(){
+    	String nameMethod =thisJoinPointStaticPart.getSignature().getName();
+    	if(nameMethod.equals("moneyMakeTransaction")) {
+    		createFile("Transaccion de dinero");
+        	System.out.println("Transaccion de dinero " + date);
+    	}
+    	else if (nameMethod.equals("moneyWithdrawal")){
+    		createFile("Retiro de dinero");
+        	System.out.println("Retiro de dinero " + date);
+    	}
+		
+    }
+    
+    
+    
+    /*
+    after() : moneyTransaction() {    	
     	createFile("Transaccion de dinero");
     	System.out.println("Transaccion de dinero " + date);
     }
@@ -35,6 +47,7 @@ public aspect Logger {
     	System.out.println("Retiro de dinero " + date);
     	
     }
+    */
     
     private void createFile(String transaction) {
 		File fileLog = new File(ruta + "log.txt");
