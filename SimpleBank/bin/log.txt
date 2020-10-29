@@ -7473,4 +7473,3 @@ Transaccion de dinero 11:16:47;29/10/2020
 Retiro de dinero  11:16:47;29/10/2020
 Retiro de dinero  11:16:47;29/10/2020
 Retiro de dinero  11:33:40;29/10/2020
-Retiro de dinero  11:34:12;29/10/2020

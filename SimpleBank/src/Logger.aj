@@ -32,7 +32,7 @@ public aspect Logger {
     after() : moneyWithdrawal() {
     	
     	createFile("Retiro de dinero ");
-    	System.out.println("Transaccion de dinero " + date);
+    	System.out.println("Retiro de dinero " + date);
     	
     }
     
